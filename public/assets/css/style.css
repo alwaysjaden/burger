@@ -1,9 +1,11 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  /* background: #faebd7; */
 }
-
+body {
+  background-image: url(../image/burgerwall.jpg);
+}
 .label {
   font-weight: bold;
 }
@@ -13,7 +15,81 @@ li {
   margin: 5px;
   background: aqua;
 }
+.addBtn {
+  color:white;
+  border: 1px solid white;
+}
+
+.modal-header {
+  color:white;
+  background-color: black;
+}
+
 
 .form-group {
   margin-bottom: 5px;
+  color:#97999B
 }
+
+.btn-outline-light {
+  border:none;
+}
+
+.addBtn {
+  color:white;
+  border:1px solid white;
+}
+.mainBody {
+  /* background-color: cornflowerblue; */
+  margin-top: 30px;
+  padding: 20px;
+}
+.change-devoured {
+  padding: 3px;
+  font-size: small;
+  /* color:white; */
+}
+
+.delete-burger{
+  padding:0;
+}
+
+/* .mainCol h2 {
+  color:white;
+} */
+.wantCol ul li {
+  color: #F5DF4D;
+}
+.wantCol h2 {
+  color: #F5DF4D;
+}
+
+.wantCol .change-devoured  {
+  color: white;
+  border: solid 1px white;
+}
+
+.devouredCol ul li {
+  color: #97999B;
+}
+.devouredCol h2 {
+  color: #97999B;
+}
+
+.wantCol {
+  background-color: #97999B;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px#F5DF4D;
+}
+.devouredCol{
+  background-color:#F5DF4D;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px#97999B;
+
+}
+
+/* .addBurger {
+  background-color: aquamarine;
+} */

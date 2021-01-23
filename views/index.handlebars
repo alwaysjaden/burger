@@ -1,38 +1,104 @@
-<h1>burgers!</h1>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <h1>Burgers!</h1>
+    </a>
+    <!-- Button trigger modal -->
+<button type="button" class="btn addBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add New Burger!!
+</button>
 
-<h2>burgers that are in Waiting for devoured </h2>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel"><h2>Add a burger</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <form class="create-form">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+            <div class="form-group">
+              <label for="ca">Burger Name:</label>
+              <input type="text" id="ca" name="burger_name">
+            </div>
 
-<h2>burgers that Devoured!</h2>
+            <div class="form-group">
+              <label for="devoured">Devoured?</label><br>
+              <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+              <input type="radio" name="devoured" value="0"> I want to Eat
+            </div>
+      
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+            <button type="submit" class="btn btn-outline-warning">Add burger</button>
+          </form>
+    </div>
+  </div>
+      </div>
+      {{!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> --}}
+    </div>
+  </div>
+</div>
+  </div>
+</nav>
 
-<h2>Add a burger</h2>
-<form class="create-form">
+
+<div class="container mainBody">
+  <div class="row justify-content-center">
+    
+    <div class="col-5 mainCol wantCol">
+      <h2>I want to Eat ... </h2>
+      <hr>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-5 mainCol devouredCol">
+     <h2>Devouring!!!!</h2>
+      <hr>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-2 addCol">
+
+
+{{!--   
+</div>
+  <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">burger Name:</label>
+    <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="burger_name">
   </div>
 
   <div class="form-group">
-    <label for="devoured">devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
-    <input type="radio" name="devoured" value="0"> Waiting for devoured
+    <label for="devoured">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> I want to Eat
   </div>
 
-  <button type="submit">Add burger</button>
-</form>
+  <button type="submit" class="btn btn-outline-warning">Add burger</button>
+</form> --}}
+
+
+
+
+
+
+
+
+
+
